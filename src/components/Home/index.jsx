@@ -17,8 +17,8 @@ const Home = () =>
         <p>Welcome!</p>
         <p>We know it's hard to remember everything, and we want to help.</p>
         <p>Please either add a new note or view all past notes.</p>
-        <Button><Link to="/create">Create Note</Link></Button>
-        <Button><Link to="/notes">View Notes</Link></Button>
+        <Link to="/create"><Button>Create Note</Button></Link>
+        <Link to="/notes"><Button>View Notes</Button></Link>
       </Container>
     </div>
   </div>;

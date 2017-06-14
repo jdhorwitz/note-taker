@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Note = ( {name, title, note }) => {
-  <div className="ui styled accordion">
-    <div className="title">
-      <i aria-hidden="true" className="dropdown icon"></i>{title} by {name}</div>
-    <div class="content">{note}</div>
-  </div> 
-}
+const IndividualNote = ({ note }) =>
+  <div role="list" className="ui celled list">
+    <div role="listitem" className="item">
+      <div className="content">
+        <div className="header">
+          {note.title} by {note.name}
+        </div>
+        {note.note}
+      </div>
+    </div>
+  </div>;
 
-export default Note;
+export default IndividualNote;

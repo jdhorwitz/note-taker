@@ -1,14 +1,13 @@
 import React from 'react';
 import { Button, Image, Divider, Container, Header } from 'semantic-ui-react';
-import { ExpanseUp } from 'animate-components';
 import { Link } from 'react-router-dom';
-// import AA from '../../common/aa.svg';
+import logo from '../../common/farmlogs.png';
 import './index.css';
 
 const Home = () =>
   <div className="home-page">
-    <ExpanseUp duration=".5s">
-      {/*<Image src={AA} size="medium" centered />*/}
+    <div>
+      <Image src={logo} size="medium" centered />
       <Header block as="h2" textAlign="center">
         Welcome to Farm Notes!
       </Header>
@@ -21,7 +20,7 @@ const Home = () =>
         <Button><Link to="/create">Create Note</Link></Button>
         <Button><Link to="/notes">View Notes</Link></Button>
       </Container>
-    </ExpanseUp>
+    </div>
   </div>;
 
 export default Home;

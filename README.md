@@ -1,4 +1,4 @@
-Welcome to my Note Taking Application!
+##Welcome to my Note Taking Application!
 
 I was very excited about this opportunity and wanted to get in my take home as soon
 as possible!
@@ -8,7 +8,7 @@ To run this application, once downloaded, run
   tar -zxvf josh.tar.gz
 ```
 
-Once exctracted, change into the directory where it was extraced and either run
+Change into the directory where it was extraced and either run
 
 ```
 npm install
@@ -46,11 +46,11 @@ or
 yarn test
 ```
 
-I build this Note Taking application with React and Redux.  Given some more time things
-that I was considering adding that I really enjoy would be Redux-Saga as well as use
+I built this Note Taking application with React and Redux.  Given some more time other
+things that I was considering that I really enjoy would be Redux-Saga as well as to use
 Normalizr.
 
-Thanks so much for taking the time to take a look at it and hope we get to talk about it
+Thank you so much for taking the time to take a look at it and I hope we get to talk about it
 in the near future!
 
 Thanks,

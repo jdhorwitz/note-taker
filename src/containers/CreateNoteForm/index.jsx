@@ -1,5 +1,5 @@
-/* eslint-disable */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -22,7 +22,7 @@ class NoteCreator extends React.Component {
         <div className="field">
           <label>Name</label>
           <Field
-            placeholder="First Name"
+            placeholder="Your Name"
             name="name"
             component="input"
             type="text"
@@ -46,11 +46,15 @@ class NoteCreator extends React.Component {
           />
         </div>
         <button type="submit" className="ui button">Submit</button>
-        {this.state.redirect ? <Redirect to="/" /> : null}
+        {this.state.redirect ? <Redirect to="/notes" /> : null}
       </form>
     );
   }
 }
+
+NoteCreator.propTypes = {
+  saveNote: PropTypes.func.isRequired,
+};
 
 export default reduxForm({
   form: 'NoteNewForm',

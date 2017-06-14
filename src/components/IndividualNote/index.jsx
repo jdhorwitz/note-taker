@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const IndividualNote = ({ note }) =>
   <div role="list" className="ui celled list">
@@ -12,5 +12,9 @@ const IndividualNote = ({ note }) =>
       </div>
     </div>
   </div>;
+
+IndividualNote.propTypes = {
+  note: PropTypes.object.isRequired,
+};
 
 export default IndividualNote;

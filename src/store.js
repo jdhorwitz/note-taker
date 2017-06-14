@@ -1,5 +1,6 @@
-import { applyMiddleware, createStore, combineReducers } from 'redux';
+import { applyMiddleware, createStore, combineReducers, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
+import { autoRehydrate } from 'redux-persist';
 import middlewares from './middleware';
 
 import notes from './containers/CreateNoteForm/reducer';
@@ -11,7 +12,10 @@ const rootReducer = combineReducers({
 
 const devToolsExtensions =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
-const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
+const createStoreWithMiddleware = compose(
+  applyMiddleware(...middlewares),
+  autoRehydrate(),
+)(createStore);
 
 const store = createStoreWithMiddleware(rootReducer, devToolsExtensions);
 

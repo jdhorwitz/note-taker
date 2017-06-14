@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Header, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import IndividualNote from '../IndividualNote';
@@ -26,4 +27,7 @@ class Notes extends React.Component {
 
 const mapStateToProps = state => ({ notes: state.notes });
 
+Notes.propTypes = {
+  notes: PropTypes.array.isRequired,
+};
 export default connect(mapStateToProps)(Notes);

@@ -3,7 +3,7 @@ import { reducer as formReducer } from 'redux-form';
 import { autoRehydrate } from 'redux-persist';
 import middlewares from './middleware';
 
-import notes from './containers/CreateNoteForm/reducer';
+import notes from '../containers/CreateNoteForm/reducer';
 
 const rootReducer = combineReducers({
   form: formReducer,

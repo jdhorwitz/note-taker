@@ -7,6 +7,7 @@ import './index.css';
 const Home = () =>
   <div className="home-page">
     <div>
+      <Divider hidden />
       <Image src={logo} size="medium" centered />
       <Header block as="h2" textAlign="center">
         Welcome to Farm Notes!

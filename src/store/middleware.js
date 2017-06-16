@@ -1,6 +1,4 @@
-import reduxThunk from 'redux-thunk';
-
-const middlewares = [reduxThunk];
+const middlewares = [];
 
 if (process.env.NODE_ENV === 'development') {
   const { logger } = require('redux-logger');

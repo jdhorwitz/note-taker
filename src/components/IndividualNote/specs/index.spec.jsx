@@ -29,6 +29,8 @@ describe('IndivdualNote component', () => {
   });
 
   it('should display the body of the note that is passed in on props', () => {
-    expect(enzymeWrapper.contains('Remember to use free software')).toBeTruthy();
+    expect(
+      enzymeWrapper.contains('Remember to use free software'),
+    ).toBeTruthy();
   });
-})
+});

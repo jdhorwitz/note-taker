@@ -20,5 +20,5 @@ describe('Menu Component', () => {
 
   it('should render 3 menu items', () => {
     expect(enzymeWrapper.find(Menu.Item).length).toBe(3);
-  });  
+  });
 });
